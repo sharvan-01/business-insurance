@@ -1,7 +1,1 @@
-import { greetUser } from '$utils/greet';
-
-window.Webflow ||= [];
-window.Webflow.push(() => {
-  const name = 'John Doe';
-  greetUser(name);
-});
+//this is comment to check if the commit works
