@@ -1,6 +1,6 @@
 const id = 1;
 const api = new URL(`https://x8ki-letl-twmt.n7.xano.io/api:MR0gzHqf/industry?id=${id}`);
-var dataARR <object>;
+let dataARR;
 //at this point we have all the products related to the users industry
 async () => {
   const response = await fetch(api);
