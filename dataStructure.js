@@ -2,9 +2,9 @@ const id = 1;
 const api = new URL(`https://x8ki-letl-twmt.n7.xano.io/api:MR0gzHqf/industry?id=${id}`);
 //at this point we have all the products related to the users industry
 const response = await fetch(api);
-const data = await response.json();
-const recommendedPlans = [];
-const dataARR = Object.entries(data);
+var data = await response.json();
+var recommendedPlans = [];
+var dataARR = Object.entries(data);
 
 //iterating through all the products
 dataARR.forEach((element) => {
@@ -15,11 +15,11 @@ dataARR.forEach((element) => {
   }
 
   function findTheLargestSumInsured(product) {
-    const fundingSI = product.fundingJSON.find(({ category }) => category === 'Seed'); //you will have to receive which funding category they chose over here
-    const revenueSI = product.revenueJSON.find(
+    var fundingSI = product.fundingJSON.find(({ category }) => category === 'Seed'); //you will have to receive which funding category they chose over here
+    var revenueSI = product.revenueJSON.find(
       ({ category }) => category === '100000000000-250000000000' || '250cr' //you will have to receive which revenue category they chose over here
     );
-    const estimate = fundingSI.sumInsured > revenueSI.sumInsured ? fundingSI : revenueSI; //finding the largest SI for this particular product
+    var estimate = fundingSI.sumInsured > revenueSI.sumInsured ? fundingSI : revenueSI; //finding the largest SI for this particular product
     console.log('the sum insured is: ' + estimate.sumInsured);
     console.log('the price is: ' + estimate.price);
   }
