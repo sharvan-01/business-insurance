@@ -1,11 +1,12 @@
 const id = 1;
 const api = new URL(`https://x8ki-letl-twmt.n7.xano.io/api:MR0gzHqf/industry?id=${id}`);
+var dataARR <object>;
 //at this point we have all the products related to the users industry
 async () => {
   const response = await fetch(api);
   const data = await response.json();
   const recommendedPlans = [];
-  const dataARR = Object.entries(data);
+  dataARR = Object.entries(data);
 };
 
 //iterating through all the products
